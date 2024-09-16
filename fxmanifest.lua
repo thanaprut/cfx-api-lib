@@ -1,25 +1,18 @@
 fx_version 'cerulean'
-games { 'rdr3', 'gta5' }
+games { 'gta5' }
 
-author 'Sm1Ly'
-description 'A resource you can use to make api calls to you server'
-version '1.0.0'
+author '5m1Ly'
+description 'Easly built restfull apis for you fx server.'
+version 'v1.0.0'
 
+server_only 'yes'
+lua54 'yes'
+
+-- load the RestFX library
 server_scripts {
-
-	-- http status codes
-	"config/status-codes.lua",
-
-	-- shared methods
-	"server/api/routers/methods/*.lua",
-
-	-- routing class mimics
-	"server/api/routers/*.lua",
-
-	-- api class mimic
-	"server/api/api.lua",
-
-	-- use api class
-	"server/main.lua"
-
+	"conf/*.lua",
+	"build/modules/*.js",
+	"build/modules/*.lua",
+	"build/*.lua",
+	"build/routes/*.lua"
 }
